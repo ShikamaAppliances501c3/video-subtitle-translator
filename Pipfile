@@ -12,6 +12,7 @@ pillow = "*"
 pynput = "*"
 ipdb = "*"
 mss = "*"
+pyobjc-framework-quartz = "*"
 
 [requires]
 python_version = "3.6"
