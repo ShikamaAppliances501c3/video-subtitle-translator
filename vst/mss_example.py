@@ -1,5 +1,15 @@
-from mss import mss
+import mss
+import mss.tools
 
-# The simplest use, save a screen shot of the 1st monitor
-with mss() as sct:
-    sct.shot(output="hello.png")
+
+with mss.mss() as sct:
+    # The screen part to capture
+    monitor = {"top": 160, "left": 160, "width": 500, "height": 535}
+    output = "sct-{top}x{left}_{width}x{height}.png".format(**monitor)
+
+    # Grab the data
+    sct_img = sct.grab(monitor)
+
+    # Save to the picture file
+    mss.tools.to_png(sct_img.rgb, sct_img.size, output=output)
+    print(output)
