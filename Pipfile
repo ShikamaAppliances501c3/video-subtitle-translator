@@ -13,6 +13,7 @@ pynput = "*"
 ipdb = "*"
 mss = "*"
 pyobjc-framework-quartz = "*"
+vst = {editable = true, path = "."}
 
 [requires]
 python_version = "3.6"
