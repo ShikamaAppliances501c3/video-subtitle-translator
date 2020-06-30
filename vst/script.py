@@ -8,6 +8,8 @@ from vst.screenshot import Screenshot
 import os
 from tempfile import mkstemp
 
+from googletrans import Translator
+
 
 class KeyListener:
     def __init__(self, path):
@@ -48,4 +50,7 @@ if __name__ == "__main__":
         listener.join()
     os.close(fd)
     text = ChineseOCR.ocr(path)
+    translator = Translator()
+    print(path)
     print(text)
+    print(translator.translate(text).text)
