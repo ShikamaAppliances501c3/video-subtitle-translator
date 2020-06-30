@@ -15,6 +15,7 @@ mss = "*"
 pyobjc-framework-quartz = "*"
 vst = {editable = true, path = "."}
 pytesseract = "*"
+googletrans = "*"
 
 [requires]
 python_version = "3.6"
